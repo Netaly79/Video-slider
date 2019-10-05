@@ -34,7 +34,9 @@ function addVideo(data)
       });
     $("<div>").addClass("carousel-item active")
         .appendTo($carousel);
-    let $firstframe=$(".active");
+    let $firstframe=$(".active");$left.on("click", function (){
+        $('video').trigger('pause');
+    })
     $("<video>").addClass("d-block w-100")
     .attr("src",data[0].previewUrl)
     .attr("controls","controls")
